@@ -30,7 +30,7 @@ const [investigationStatus, setInvestigationStatus] = useState("Open");
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/dashboard/stats",
+          `${process.env.NEXT_PUBLIC_API_URL}/api/dashboard/stats`,
           {
             method: "GET",
             headers: {
@@ -157,7 +157,7 @@ const reviewInvestigation = (analysis) => {
         }
 
         const response = await fetch(
-            "http://localhost:5000/api/incidents",
+            `${process.env.NEXT_PUBLIC_API_URL}/api/incidents`,
             {
                 method: "POST",
                 headers: {

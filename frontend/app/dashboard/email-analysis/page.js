@@ -53,7 +53,7 @@ export default function EmailAnalysis() {
       formData.append("emailFile", emailFile);
 
       const response = await fetch(
-        "http://localhost:5000/api/analyze/email/upload",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/analyze/email/upload`,
         {
           method: "POST",
           headers: {

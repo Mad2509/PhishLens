@@ -40,7 +40,7 @@ export default function IncidentDetails() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/incidents/${incidentId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -73,7 +73,7 @@ export default function IncidentDetails() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/incidents/${incidentId}/artifacts`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}/artifacts`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -101,7 +101,7 @@ export default function IncidentDetails() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            `http://localhost:5000/api/activities/${incidentId}`,
+            `${process.env.NEXT_PUBLIC_API_URL}/api/activities/${incidentId}`,
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -136,7 +136,7 @@ export default function IncidentDetails() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/incidents/${incidentId}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}`,
         {
           method: "PUT",
           headers: {
@@ -171,7 +171,7 @@ const updateStatus = async () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            `http://localhost:5000/api/incidents/${incidentId}`,
+            `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}`,
             {
                 method: "PUT",
                 headers: {
@@ -213,7 +213,7 @@ const saveNotes = async () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            `http://localhost:5000/api/incidents/${incidentId}`,
+            `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}`,
             {
                 method: "PUT",
                 headers: {
@@ -262,7 +262,7 @@ const saveNotes = async () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/incidents/${incidentId}/artifacts`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}/artifacts`,
         {
           method: "POST",
           headers: {
@@ -317,7 +317,7 @@ const saveNotes = async () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/incidents/${incidentId}/artifacts/${artifactId}`,
+               `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}/artifacts/${artifactId}`,
         {
           method: "DELETE",
           headers: {

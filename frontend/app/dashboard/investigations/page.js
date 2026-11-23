@@ -29,7 +29,7 @@ const [sortBy, setSortBy] = useState("newest");
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/incidents",
+           `${process.env.NEXT_PUBLIC_API_URL}/api/incidents`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -66,7 +66,7 @@ const [sortBy, setSortBy] = useState("newest");
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/incidents",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/incidents`,
         {
           method: "POST",
           headers: {
@@ -119,7 +119,7 @@ const deleteIncident = async (incidentId) => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            `http://localhost:5000/api/incidents/${incidentId}`,
+            `${process.env.NEXT_PUBLIC_API_URL}/api/incidents/${incidentId}`,
             {
                 method: "DELETE",
                 headers: {
