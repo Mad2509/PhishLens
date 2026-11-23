@@ -1,0 +1,32 @@
+
+# Environment variables
+.env
+.env.*
+!**/.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js
+.next/
+**/.next/
+out/
+
+# Build files
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
